@@ -1,32 +1,5 @@
- \documentclass[a4paper,12pt]{article}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage{eurosym}
-\usepackage{vmargin}
-\usepackage{amsmath}
-\usepackage{enumerate}
-\usepackage{multicol}
-\usepackage{graphics}
-\usepackage{epsfig}
-\usepackage{framed}
-\usepackage{subfigure}
-\usepackage{fancyhdr}
-
-\setcounter{MaxMatrixCols}{10}
-%TCIDATA{OutputFilter=LATEX.DLL}
-%TCIDATA{Version=5.00.0.2570}
-%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
-%TCIDATA{LastRevised=Wednesday, February 23, 2011 13:24:34}
-%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
-%TCIDATA{Language=American English}
-
-%\pagestyle{fancy}
-\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
-%\lhead{MA4413 2013} \rhead{Mr. Kevin O'Brien}
-%\chead{Midterm Assessment 1 }
-%\input{tcilatex}
-
-\begin{document}
-\section{Hypothesis Testing}
+Hypothesis Testing
+====================================================
 
 
 Hypothesis testing is a common practice in science that involves conducting tests and experiments to see if a proposed explanation for an observed phenomenon works in practice. A hypothesis is a tentative explanation for some kind of observed phenomenon, and is an important part of the scientific method. The scientific method is a set of steps that is commonly employed by those in scientific fields to give scientific explanations for various phenomena.
