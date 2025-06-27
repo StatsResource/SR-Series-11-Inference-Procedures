@@ -1,0 +1,23 @@
+## Confidence Interval for a Mean (Small Sample)
+
+- A random sample of \( n = 10 \) light bulbs has a **sample mean** of  
+  \( \bar{x} = 4{,}000 \) hours and a **sample standard deviation**  
+  \( s = 200 \) hours.
+
+- The operating life of light bulbs is assumed to be approximately **normally distributed**.
+
+- To estimate the **population mean** operating life, we construct a 95% confidence interval:
+
+  \[
+  4{,}000 \pm (2.262)(63.3) = (3{,}857,\ 4{,}143)
+  \]
+
+- The **standard error** is calculated as:
+
+  \[
+  SE(\bar{x}) = \frac{200}{\sqrt{10}} = 63.3
+  \]
+
+- For a 95% confidence level with \( df = 9 \), the **t-quantile** is 2.262.
+
+---
