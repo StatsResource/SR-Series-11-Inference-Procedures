@@ -1,0 +1,119 @@
+## Confidence Intervals for Means
+
+The general structure of a confidence interval for the population mean is:
+
+\[
+\bar{x} \pm (\text{Quantile} \times \text{Standard Error})
+\]
+
+### Quantiles (Z-values for large samples \( n > 30 \))
+
+| Confidence Level | Quantile (Z) |
+|------------------|--------------|
+| 90%              | 1.645        |
+| 95%              | 1.960        |
+| 99%              | 2.576        |
+
+---
+
+### Sample Mean
+
+The sample mean \( \bar{x} \) is usually provided in the question. It is considered a **point estimate** for the true population mean.
+
+---
+
+### Standard Error
+
+Standard error is computed using the sample standard deviation \( s \) and sample size \( n \):
+
+\[
+SE(\bar{x}) = \frac{s}{\sqrt{n}}
+\]
+
+---
+
+### Interpretation of Confidence Intervals
+
+- A **95% confidence interval** has a 95% probability of containing the true population parameter.
+- This implies a 5% chance the interval does **not** include the true value.
+- Confidence levels such as **90%**, **95%**, **99%**, and **99.9%** are commonly used.
+
+---
+
+### Relationship Between Confidence Level and α
+
+- Confidence level is expressed as \( 100(1 - \alpha)\% \)
+- For 95% confidence: \( \alpha = 0.05 \)
+- For 99% confidence: \( \alpha = 0.01 \)
+- Knowing \( \alpha \) is essential for determining quantile values.
+
+---
+
+## Confidence Intervals for the Difference of Two Means
+
+If \( \bar{X} \) and \( \bar{Y} \) are sample means from two independent populations:
+
+\[
+(\bar{X} - \bar{Y}) \pm \left(\text{Quantile} \times SE(\bar{X} - \bar{Y})\right)
+\]
+
+- If the **combined sample size** exceeds 30, the large-sample Z-quantile is appropriate.
+
+---
+
+### Example: Known Parameters
+
+Suppose:
+
+- Drug group: \( \mu = 50, \ \sigma^2 = 25 \)
+- Control group: \( \mu = 40, \ \sigma^2 = 24 \)
+
+You can use these known parameters to construct a confidence interval.
+
+---
+
+## Standard Error Summary
+
+- **Standard error** reflects variability of the sample statistic.
+- Each point estimate (mean, proportion, etc.) has its own SE formula.
+- For the mean:
+
+\[
+SE(\bar{x}) = 
+\begin{cases}
+\frac{\sigma}{\sqrt{n}} & \text{if population } \sigma \text{ known} \\
+\frac{s}{\sqrt{n}} & \text{if } \sigma \text{ is estimated}
+\end{cases}
+\]
+
+---
+
+## Confidence Interval for a Mean (Small Sample)
+
+If the data are normally distributed and \( s \) is used to estimate \( \sigma \), the confidence interval becomes:
+
+\[
+\bar{X} \pm t_{1 - \alpha/2, n - 1} \cdot \frac{s}{\sqrt{n}}
+\]
+
+Where \( t_{1 - \alpha/2, n - 1} \) is the quantile from the Student's t-distribution with \( n - 1 \) degrees of freedom.
+
+---
+
+## Introduction to Hypothesis Testing
+
+- We've discussed **one-sample confidence intervals** for a mean and a proportion.
+- Later, we’ll explore **two-sample confidence intervals**.
+- Before that, we shift focus to **hypothesis testing**.
+
+---
+
+### Quantile Reminder
+
+If sample size \( n > 30 \) and confidence level is 95%, the appropriate quantile is:
+
+\[
+z = 1.96
+\]
+
+---
