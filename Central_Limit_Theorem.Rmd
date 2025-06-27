@@ -1,0 +1,104 @@
+Central Limit Theorem
+=============================
+
+## Sampling Distribution
+
+- A **sampling distribution** is a probability distribution of a statistic (e.g. mean, median, variance) obtained from a large number of samples drawn from the same population.
+- It represents the distribution of values a statistic can take due to random sampling.
+
+---
+
+## The Central Limit Theorem (CLT)
+
+The central limit theorem allows statisticians to use sample statistics to make inferences about population parameters without requiring the population distribution to be normal.
+
+Key insights:
+
+- Many statistics (e.g. sample mean, sample variance) tend toward a **normal distribution**, even if the underlying population is not normally distributed.
+- Even with non-normal populations, the distribution of sample statistics becomes approximately normal when the **sample size is large** (typically \( n > 30 \)).
+
+---
+
+## Simulation Example (R)
+
+A large population is generated using a combination of random normal samples with different means and standard deviations:
+
+```r
+Z <- c(
+  rnorm(300, 10, 3),
+  rnorm(150, 15, 1),
+  rnorm(100, 24, 3.5),
+  rnorm(200, 30, 4),
+  rnorm(400, 45, 6),
+  rnorm(500, 60, 2)
+)
+Population <- Z
+hist(Population, breaks = -1:69, col = c("midnightblue", "lightblue", "slateblue"))
+```
+
+100 samples of size 60 are taken from the population. For each sample, the mean, median, and variance are computed and their Q-Q plots are evaluated for normality:
+
+```r
+Mean.Sample <- Median.Sample <- Var.Sample <- numeric()
+
+for (i in 1:100) {
+  Sample <- sample(Z, 60)
+  Mean.Sample <- c(Mean.Sample, mean(Sample))
+  Median.Sample <- c(Median.Sample, median(Sample))
+  Var.Sample <- c(Var.Sample, var(Sample))
+}
+
+qqnorm(Mean.Sample, pch = 18, col = "red"); qqline(Mean.Sample)
+qqnorm(Median.Sample, pch = 18, col = "red"); qqline(Median.Sample)
+qqnorm(Var.Sample, pch = 18, col = "red"); qqline(Var.Sample)
+```
+
+These plots reveal that even when the population is not normal, the **sampling distributions** of these statistics appear approximately normal.
+
+---
+
+## Theoretical Summary of CLT
+
+Suppose \( X \sim \text{Any Distribution} \), with:
+
+- Mean: \( \mu = E(X) \)
+- Variance: \( \sigma^2 \)
+
+Then, for samples of size \( n \):
+
+- The **sampling distribution** of \( \bar{X} \) tends to be normal when \( n \) is large
+- \( \text{Mean of } \bar{X} = \mu \)
+- \( \text{Standard Deviation of } \bar{X} = \frac{\sigma}{\sqrt{n}} \), also called the **standard error (SE)**
+
+---
+
+## Quantile Functions and R Syntax
+
+### Cumulative Distribution Function (CDF)
+
+Given a threshold \( k \), compute probability:
+
+\[
+P(X \leq k)
+\]
+
+- In R: `pnorm(k)`
+
+### Quantile Function (Inverse CDF)
+
+Given a probability \( p \), find threshold \( k \) such that:
+
+\[
+P(X \leq k) = p
+\]
+
+- In R: `qnorm(p)`
+
+Examples:
+
+```r
+qnorm(0.975)    # returns ~1.96
+qnorm(0.8997)   # returns ~1.28
+```
+
+---
