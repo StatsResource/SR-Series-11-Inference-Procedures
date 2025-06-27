@@ -1,0 +1,88 @@
+# MA4413 Tutorials — Week 9
+
+## Question 10: Two-Sample Z-Test (Known Variances)
+
+A survey was conducted to determine whether women study more hours than men at a particular college.
+
+- Sample of women:  
+  \( n_1 = 10, \ \bar{x}_1 = 120, \ \sigma_1 = 28 \)
+  
+- Sample of men:  
+  \( n_2 = 12, \ \bar{x}_2 = 105, \ \sigma_2 = 35 \)
+
+**Hypotheses:**
+
+- \( H_0: \mu_1 = \mu_2 \)  
+- \( H_a: \mu_1 > \mu_2 \) (one-tailed test)
+
+**R Code:**
+
+```r
+xbar1 <- 120
+xbar2 <- 105
+sd1 <- 28
+sd2 <- 35
+n1 <- 10
+n2 <- 12
+
+TS <- ((xbar1 - xbar2) - 0) / sqrt((sd1^2 / n1) + (sd2^2 / n2))
+TS  # [1] 1.116536
+```
+
+**Critical value (for one-tailed test at 5% significance):**
+
+```r
+qnorm(0.95)  # [1] 1.644854
+```
+
+Since **1.1165 < 1.6449**, we fail to reject \( H_0 \). There is not enough evidence to conclude that women study more than men.
+
+**p-value:**
+
+```r
+1 - pnorm(1.116536)  # or use pnorm(1.116536, lower.tail = FALSE)
+# [1] 0.1320964
+```
+
+Since the p-value > 0.05, the result is not statistically significant.
+
+---
+
+## Question 8: Two-Proportion Z-Test
+
+A gardening show survey examined the link between **purchase behavior** and **intention to return next year**.
+
+- Total respondents: 220
+- Purchased: 101 → 69 intend to return  
+- Not purchased: 119 → 68 intend to return
+
+**Hypotheses:**
+
+- \( H_0 \): Return rates are equal for both groups  
+- \( H_1 \): Return rates are not equal
+
+**Proportions:**
+
+- Purchasers: \( p_1 = 69 / 101 \approx 0.683 \)
+- Non-purchasers: \( p_2 = 68 / 119 \approx 0.571 \)
+
+**Difference in proportions:**
+
+\[
+D = p_1 - p_2 = 0.1117
+\]
+
+**Estimated Standard Error of D:**  
+\[
+SE(D) \approx 0.06558
+\]
+
+**Test Statistic:**
+
+\[
+Z = \frac{0.1117}{0.06558} \approx 1.704
+\]
+
+Since **1.704 < 1.96**, we **fail to reject** \( H_0 \). There is insufficient evidence to claim an association between purchase and intention to return.
+
+---
