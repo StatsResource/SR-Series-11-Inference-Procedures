@@ -1,0 +1,96 @@
+## Computing Confidence Intervals
+
+A **confidence interval** provides an estimated range of values which is likely to include an unknown population parameter. The general form is:
+
+\[
+\text{Point Estimate} \pm (\text{Quantile} \times \text{Standard Error})
+\]
+
+Where:
+
+- **Point Estimate**: Sample statistic (e.g., mean or proportion)
+- **Quantile**: A value from a probability distribution corresponding to the confidence level
+- **Standard Error**: Measures variability of the sample estimate across samples of size \( n \)
+
+---
+
+## Confidence Intervals (Revision)
+
+- A **95% confidence interval** contains the true population value in 95 out of 100 repeated samples.
+- There's a **5% chance** that the interval does **not** capture the population parameter.
+- Other typical confidence levels include **90%**, **99%**, and **99.9%**.
+
+---
+
+## Confidence Level (Revision)
+
+- A confidence level is denoted by \( 1 - \alpha \)
+- Example: A 95% confidence level corresponds to \( \alpha = 0.05 \)
+- Calculation:
+  \[
+  100(1 - \alpha)\% = 100(1 - 0.05)\% = 95\%
+  \]
+- Correct specification of \( \alpha \) is critical when determining quantiles.
+
+---
+
+## Quantiles
+
+- A **quantile** determines the "cut-off" value from a distribution for a given confidence level.
+- For large samples (typically \( n > 30 \)), the **standard normal distribution** is used.
+- Quantiles satisfy:
+  \[
+  P(-a \leq Z \leq a) = 1 - \alpha
+  \]
+
+### Common Z-Quantiles
+
+| Confidence Level | Quantile (\( z_{\alpha/2} \)) |
+|------------------|-------------------------------|
+| 90%              | 1.645                         |
+| 95%              | 1.96                          |
+| 99%              | 2.576                         |
+
+---
+
+## Types of Confidence Intervals for Sample Means
+
+### Type 1: Known Population Variance
+
+- Used primarily for teaching; rare in practice.
+- Formula:
+  \[
+  \bar{x} \pm z_{(\alpha/2)} \cdot \frac{\sigma}{\sqrt{n}}
+  \]
+- Quantiles come from Z-tables.
+
+### Type 2: Large Sample, Unknown Population Variance
+
+- Applies when \( n > 30 \)
+- Estimate population SD using sample SD \( s \)
+- Use same formula structure but replace \( \sigma \) with \( s \):
+  \[
+  \text{S.E.}(\bar{x}) = \frac{s}{\sqrt{n}}
+  \]
+
+### Type 3: Small Sample, Unknown Population Variance
+
+- Applies when \( n \leq 30 \)
+- Use **Student's t-distribution**
+- Degrees of freedom: \( df = n - 1 \)
+- Confidence interval quantiles are from t-tables
+
+---
+
+## Using the t-Distribution for All Sample Sizes
+
+- For **small samples**, use \( df = n - 1 \)
+- For **large samples**, t-distribution converges to the Z-distribution
+- You can use the t-distribution even for large samples by setting:
+  \[
+  df = \infty
+  \]
+
+This approach makes the t-distribution a flexible tool for computing confidence intervals across a range of sample sizes.
+
+---
