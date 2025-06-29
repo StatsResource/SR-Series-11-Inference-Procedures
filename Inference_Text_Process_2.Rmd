@@ -1,0 +1,88 @@
+Here’s a polished markdown-based tutorial derived from your slides, blending confidence intervals, p-values, and critical values into one accessible guide for learners.
+
+---
+
+# Confidence Intervals, p-values, and Critical Values
+
+---
+
+## 1. Confidence Interval for a Mean (Small Sample)
+
+Suppose a sample of 10 light bulbs yields:
+
+- Sample mean: \( \bar{x} = 4000 \) hours  
+- Sample standard deviation: \( s = 200 \) hours  
+- Sample size: \( n = 10 \)
+
+Assuming a normal distribution, the **standard error** is:
+
+\[
+\text{SE}(\bar{x}) = \frac{200}{\sqrt{10}} = 63.3
+\]
+
+Using a 95% confidence level and \( df = 9 \), the t-quantile is 2.262 (from Murdoch Barnes Table).
+
+\[
+\text{CI} = 4000 \pm (2.262)(63.3) = (3857, 4143)
+\]
+
+---
+
+## 2. Interpreting Confidence Intervals
+
+A confidence interval reflects uncertainty and allows inference about population parameters. Consider two student groups:
+
+- Difference in sample means: \( \bar{x}_B - \bar{x}_A = 30 \)
+- 95% CI: \( (-15, 75) \)
+
+### Interpretation:
+
+- Group B may have up to 75 more points than A.
+- However, Group A may also score up to 15 more than B.
+- Since 0 lies within the interval, we **cannot conclude** a significant difference with 95% confidence.
+
+---
+
+## 3. Types of Confidence Intervals
+
+- **One-sample intervals:** For means or proportions from a single group.
+- **Two-sample intervals:** Compare means or proportions between two independent groups.
+
+---
+
+## 4. Understanding p-values
+
+- The **p-value** is the probability of obtaining a result as extreme as (or more extreme than) the observed one, assuming the null hypothesis is true.
+- If the p-value is **less than the significance level \( \alpha \)** (e.g., 0.05), reject \( H_0 \).
+
+### Example:
+
+- \( p = 0.042 \): Reject \( H_0 \) at the 0.05 level
+- \( p = 0.0001 \): Also leads to rejection at 0.05, but with stronger evidence
+
+There’s a debate:
+- **Traditional view:** p-values only determine whether to reject or not, based on \( \alpha \)
+- **Modern view:** Smaller p-values offer **stronger evidence** against \( H_0 \)
+
+---
+
+## 5. Interpreting p-values Thoughtfully
+
+- A **very small** p-value suggests stronger evidence against the null hypothesis.
+- **Reporting exact p-values** allows readers to judge strength of evidence themselves.
+- Example: \( p = 0.0001 \) is more compelling than \( p = 0.049 \), even though both cross the 0.05 threshold.
+
+---
+
+## 6. Critical Values
+
+A **critical value** defines the cutoff that separates:
+
+- The **rejection region** (where we reject \( H_0 \))
+- The **acceptance region** (where we do not reject \( H_0 \))
+
+It depends on:
+
+- The test type (one-tailed or two-tailed)
+- The significance level \( \alpha \)
+- The distribution in use (Z, t, etc.)
