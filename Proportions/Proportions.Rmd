@@ -1,0 +1,102 @@
+Thanks for sharing your detailed LaTeX document on hypothesis testing and confidence intervals for proportions. Here's a concise, markdown-style summary that brings out the logic and flow of your material:
+
+---
+
+# One-Sample Proportion Test
+
+## Hypotheses
+
+\[
+H_0: \pi = 60\% \quad \text{vs.} \quad H_1: \pi \neq 60\%
+\]
+
+---
+
+## Standard Error Formula (Proportions)
+
+If expressing proportions as percentages:
+
+\[
+SE(\hat{p}) = \sqrt{ \frac{\hat{p} \times (100 - \hat{p})}{n} }
+\]
+
+If expressing as decimals:
+
+\[
+SE(\hat{p}) = \sqrt{ \frac{\hat{p}(1 - \hat{p})}{n} }
+\]
+
+### Example Calculation
+
+Given:
+- \( \hat{p} = \frac{144}{200} = 0.72 = 72\% \)
+- \( 100 - \hat{p} = 28\% \)
+- \( n = 200 \)
+
+\[
+SE(\hat{p}) = \sqrt{ \frac{72 \times 28}{200} } = \sqrt{10.08} \approx 3.17\%
+\]
+
+---
+
+## Constructing a Confidence Interval for a Proportion
+
+**General Formula**:
+\[
+\hat{p} \pm Z_{\alpha/2} \times SE(\hat{p})
+\]
+
+### Example:
+- \( \hat{p} = 35\% \)
+- \( SE = 3.77\% \)
+- \( Z_{0.025} = 1.96 \)
+
+\[
+35\% \pm 1.96 \times 3.77\% = (27.6\%, 42.4\%)
+\]
+
+---
+
+## CI for Proportion: Another Example
+
+Given:
+- \( \hat{p} = 0.62 \)
+- \( n = 250 \)
+- Confidence Level: 95% → \( Z = 1.96 \)
+
+---
+
+# Two-Sample Proportion Comparison
+
+## Hypotheses
+
+\[
+H_0: \pi_1 \leq \pi_2 \quad \text{or} \quad \pi_1 - \pi_2 \leq 0
+\]
+\[
+H_1: \pi_1 > \pi_2 \quad \text{or} \quad \pi_1 - \pi_2 > 0
+\]
+
+## Aggregate Sample Proportion
+
+\[
+\bar{p} = \frac{x_1 + x_2}{n_1 + n_2}
+\]
+
+## Standard Error for Difference
+
+\[
+SE(\pi_1 - \pi_2) = \sqrt{ \bar{p} \times (100 - \bar{p}) \left( \frac{1}{n_1} + \frac{1}{n_2} \right) }
+\]
+
+## Test Statistic
+
+\[
+TS = \frac{(\hat{p}_1 - \hat{p}_2) - (\pi_1 - \pi_2)}{SE(\pi_1 - \pi_2)}
+\]
+
+Decision Rule:
+- Compare \( |TS| \) to the critical value (CV), based on \( \alpha \) and tail count
+- If \( |TS| > \text{CV} \), reject \( H_0 \)
+
+---
