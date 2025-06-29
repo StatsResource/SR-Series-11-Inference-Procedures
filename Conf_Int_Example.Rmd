@@ -1,0 +1,72 @@
+Here's a polished markdown tutorial based on your LaTeX document that walks through the process of constructing a confidence interval for the difference between two means.
+
+---
+
+# Confidence Intervals: Difference Between Two Means
+
+This tutorial outlines how to compute a confidence interval for the difference between two population means when certain statistical assumptions are satisfied.
+
+---
+
+## Assumptions
+
+To construct a valid confidence interval for \( \mu_X - \mu_Y \), we assume:
+
+- **Homogeneity of variance**: The two populations have equal variances.
+- **Normality**: Each population is normally distributed.
+- **Independence**: Each sample is independently drawn from its population.
+
+---
+
+## Formula: Standard Error of the Difference
+
+Given two independent samples with means \( \bar{X}, \bar{Y} \), variances \( s_X^2, s_Y^2 \), and sizes \( n_X, n_Y \), the standard error of the difference is:
+
+\[
+SE(\bar{X} - \bar{Y}) = \sqrt{ \frac{s_X^2}{n_X} + \frac{s_Y^2}{n_Y} }
+\]
+
+- \( s_X^2, s_Y^2 \): sample variances  
+- \( n_X, n_Y \): sample sizes  
+- Degrees of freedom: \( n_X + n_Y - 2 \)
+
+---
+
+## Example
+
+| Group | Sample Size | Mean   | Variance |
+|-------|-------------|--------|----------|
+| X     | 17          | 5.353  | 2.743    |
+| Y     | 17          | 3.882  | 2.985    |
+
+### Step 1: Point Estimate
+
+\[
+\bar{X} - \bar{Y} = 5.353 - 3.882 = 1.4699
+\]
+
+### Step 2: Standard Error (Given)
+
+\[
+SE = 0.5805
+\]
+
+### Step 3: Quantile (95% Confidence)
+
+\[
+z = 1.96
+\]
+
+### Step 4: Confidence Interval
+
+\[
+CI = 1.4699 \pm (1.96 \times 0.5805) = (0.33212, 2.60768)
+\]
+
+---
+
+## Interpretation
+
+There is evidence that the mean for group X exceeds that of group Y. With 95% confidence, the population mean difference lies between approximately **0.33 and 2.61**.
+
+Would you like to see this worked out with pooled variance or with unequal variances next?
