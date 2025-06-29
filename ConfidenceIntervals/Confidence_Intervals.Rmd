@@ -1,0 +1,101 @@
+Thanks for providing that LaTeX material. Here's a clean, markdown-formatted tutorial that consolidates and clarifies the core concepts from your slides on **confidence intervals**, **quantiles**, **standard error**, and the **margin of error**.
+
+---
+
+# Confidence Intervals: A Refresher
+
+## 1. What Is a Confidence Interval?
+
+- A **confidence interval** is a range of values that likely contains the true population parameter (e.g., mean or proportion).
+- A **95% confidence interval** implies that, in repeated samples, 95% of those intervals would contain the true parameter.
+- Common confidence levels: 90%, 95%, 99%, and 99.9%.
+
+---
+
+## 2. Confidence Level and Significance Level
+
+- Confidence level: \( 1 - \alpha \)
+- For a 95% confidence level:  
+  \[
+  \alpha = 0.05 \quad \Rightarrow \quad 1 - \alpha = 0.95
+  \]
+
+Knowing \( \alpha \) helps determine **quantiles** for constructing the interval.
+
+---
+
+## 3. Central Limit Theorem (CLT)
+
+- As sample size \( n \) increases, the **sampling distribution** of the sample mean becomes approximately **normal**, even if the population distribution is not.
+- For practical use, when \( n > 30 \), we usually assume normality for constructing intervals.
+
+---
+
+## 4. General Structure of a Confidence Interval
+
+\[
+\text{Point Estimate} \pm \text{Quantile} \times \text{Standard Error}
+\]
+
+Where:
+
+- **Point Estimate**: \( \bar{x} \) (sample mean) or \( \hat{p} \) (sample proportion)
+- **Quantile**: From Z or t distribution based on the confidence level
+- **Standard Error**: Measures spread of the sampling distribution
+
+---
+
+## 5. Quantiles and Confidence Levels
+
+For large samples (\( n > 30 \)), quantiles from the **standard normal (Z) distribution** are:
+
+| Confidence Level | Quantile \( Z_{\alpha/2} \) |
+|------------------|-----------------------------|
+| 90%              | 1.645                       |
+| 95%              | 1.960                       |
+| 99%              | 2.576                       |
+
+Quantile interpretation:  
+\[
+P(-1.96 \leq Z \leq 1.96) = 0.95
+\]
+
+---
+
+## 6. Standard Error (SE)
+
+### For Sample Mean
+
+\[
+SE(\bar{x}) = \frac{\sigma}{\sqrt{n}} \quad \text{or} \quad \frac{s}{\sqrt{n}} \quad (\text{if } \sigma \text{ unknown})
+\]
+
+### For Sample Proportion
+
+If \( \hat{p} \) is a **proportion** (e.g., 0.65):
+
+\[
+SE(\hat{p}) = \sqrt{ \frac{ \hat{p}(1 - \hat{p}) }{ n } }
+\]
+
+If expressed in **percentages** (e.g., 65%):
+
+\[
+SE(\hat{p}) = \sqrt{ \frac{ \hat{p} \times (100 - \hat{p}) }{ n } }
+\]
+
+---
+
+## 7. Margin of Error
+
+\[
+\text{Margin of Error} = \text{Quantile} \times \text{Standard Error}
+\]
+
+- Reflects the **precision** of the estimate
+- A **smaller margin of error** means **greater precision**
+- Margin of error can be reduced by **increasing sample size**
+
+---
+
+This summary distills your slides into a study-ready format. Let me know if you'd like a live example worked out using a real dataset or values.
