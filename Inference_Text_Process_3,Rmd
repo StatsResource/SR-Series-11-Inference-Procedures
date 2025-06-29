@@ -1,0 +1,62 @@
+Here’s a polished markdown tutorial summarizing your lecture content on hypothesis testing and confidence intervals for proportions. It’s organized for clarity and suitable for revision or exam prep.
+
+---
+
+# Hypothesis Testing and Proportions – Summary Guide
+
+## The Four Key Steps in Hypothesis Testing
+
+1. **State the Hypotheses**
+   - **Null Hypothesis (H₀):** Represents the status quo or no effect.
+   - **Alternative Hypothesis (H₁):** Represents a new claim or a difference.
+
+2. **Compute the Test Statistic**
+   - Use the appropriate formula (based on data and test type).
+   - Check exam resources (e.g., formula tables) for guidance.
+
+3. **Determine the Critical Value**
+   - Depends on:
+     - Sample size \( n \) → degrees of freedom = \( n - 1 \)
+     - Number of tails \( k \): one-tailed or two-tailed test
+     - Significance level \( \alpha \): commonly 0.05 or 0.01
+   - Critical values come from distributions (Z or t).
+
+4. **Apply the Decision Rule**
+   - Compare \( | \text{test statistic} | \) with the critical value.
+   - If it exceeds the critical value → reject \( H₀ \)
+
+---
+
+## Small Sample Case
+
+- Use the **Student’s t-distribution** when:
+  - Sample size \( n \leq 30 \)
+  - Population standard deviation \( \sigma \) is **unknown**
+- Degrees of freedom = \( n - 1 \)
+
+---
+
+## One-Tailed vs. Two-Tailed Tests
+
+- **One-Tailed Test:** All critical values fall in one tail
+  - Used when H₁ states a direction (e.g., “greater than” or “less than”)
+  - Set \( k = 1 \) when using lookup tables
+
+- **Two-Tailed Test:** Critical values fall in both tails
+  - Used when H₁ is nondirectional (e.g., “not equal to”)
+  - More commonly used in standard procedures
+
+---
+
+## Hypothesis Testing for Proportions
+
+This lecture also covers hypothesis testing and confidence intervals for proportions, including:
+
+- Confidence Interval for a Proportion
+- One-Sample Test for a Proportion
+- Two-Sample Test for Proportions
+- Estimating an appropriate margin of error for proportions
+
+---
+
+Would you like to see a worked example comparing proportions between two populations or a recap of when to use the Z vs. t distribution?
