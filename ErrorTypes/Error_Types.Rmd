@@ -1,0 +1,77 @@
+# Hypothesis Testing: Understanding Type I and Type II Errors
+
+## Introduction to Hypothesis Testing
+
+Hypothesis testing is a formal procedure for evaluating two competing claims about a population. These claims are:
+
+- **Null Hypothesis (H₀):** Assumes no effect or no difference  
+- **Alternative Hypothesis (H₁):** Suggests a significant effect or difference
+
+The test helps us decide whether to reject H₀ based on sample evidence.
+
+---
+
+## Two Types of Error
+
+When conducting a hypothesis test, there are two possible types of mistake:
+
+| Decision               | H₀ True        | H₀ False         |
+|------------------------|----------------|------------------|
+| Reject H₀             | Type I Error    | Correct Decision |
+| Do Not Reject H₀      | Correct Decision| Type II Error    |
+
+### Type I Error
+
+- Rejecting H₀ when it is actually **true**
+- Denoted by **α (alpha)**
+- Often set by the researcher at 0.05 or 0.01
+- Considered **more serious** because a true null hypothesis is wrongly rejected
+
+### Type II Error
+
+- Failing to reject H₀ when it is actually **false**
+- Denoted by **β (beta)**
+- Often arises due to:
+  - **Small sample sizes**
+  - **Low test sensitivity**
+- It reflects a **missed opportunity** to detect a real effect
+
+---
+
+## Significance Level and Error Trade-off
+
+- Reducing **α** (minimizing Type I errors) increases the chance of **β** (Type II errors), and vice versa
+- This creates a **trade-off**:
+  - Lowering α requires stronger evidence to reject H₀
+  - But this increases the risk of failing to reject a false H₀
+
+---
+
+## Practical Illustration: Drug Test Example
+
+Suppose you're testing whether two drugs are different in effectiveness.
+
+- **Type I Error:** Conclude that there's a difference when, in fact, the drugs are equally effective
+- **Type II Error:** Fail to detect a real difference between the two drugs when it does exist
+
+---
+
+## Die Toss Example
+
+Imagine testing whether a die is fair:
+
+- First die produces a sum of **401**:  
+  Conclude it's crooked.  
+  If it's actually fair → **Type I error**
+
+- Second die produces a sum of **360**:  
+  Conclude it's fair.  
+  If it's actually biased → **Type II error**
+
+---
+
+## Summary
+
+- **Type I Error (α):** False positive — rejecting a true null hypothesis  
+- **Type II Error (β):** False negative — failing to reject a false null hypothesis  
+- Managing these errors is key to robust experimental design
