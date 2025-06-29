@@ -1,0 +1,62 @@
+# Confidence Intervals and Estimation Techniques
+
+## Margin of Error
+
+The **margin of error** reflects the extent of uncertainty around a point estimate. It’s the product of the quantile (from Z or t distribution) and the standard error:
+
+\[
+\text{Margin of Error} = \text{Quantile} \times \text{Standard Error}
+\]
+
+- A wide interval suggests more data may be needed to improve precision.
+- The only practical way to reduce the margin of error is to **increase sample size**.
+
+---
+
+## Estimating a Proportion: Python Programming Example
+
+A survey of 160 programmers revealed that 56 use Python as their primary language. Let \( \pi \) be the true population proportion.
+
+### Point Estimate
+
+\[
+\hat{p} = \frac{56}{160} = 0.35 = 35\%
+\]
+
+---
+
+## Confidence Interval for a Proportion
+
+### Step 1: Determine the Quantile
+
+- Confidence level: 95%
+- Sample size > 30 → use **Z-distribution**
+- \( Z = 1.96 \)
+
+### Step 2: Compute Standard Error
+
+\[
+SE(\hat{p}) = \sqrt{ \frac{35 \times 65}{160} } = 3.77\%
+\]
+
+### Step 3: Construct the Confidence Interval
+
+\[
+35\% \pm (1.96 \times 3.77\%) = 35\% \pm 7.4\% = (27.6\%, 42.4\%)
+\]
+
+---
+
+## Student’s t-Distribution
+
+When the sample size is small (typically \( n \leq 30 \)) and the population standard deviation \( \sigma \) is **unknown**, we use the Student’s t-distribution instead of the normal distribution.
+
+### Key Characteristics
+
+- It accounts for increased uncertainty in small samples.
+- The **degrees of freedom** for a single-sample mean is \( df = n - 1 \).
+- As sample size increases, the t-distribution becomes nearly identical to the standard normal distribution.
+
+> In large samples, using \( df = \infty \) (i.e., Z-distribution) yields nearly identical results to the t-distribution.
+
+---
