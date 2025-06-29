@@ -1,0 +1,116 @@
+Here’s a neatly organized markdown-style tutorial based on your lecture content that walks through hypothesis testing, two-sample comparisons, and fractional factorial design concepts:
+
+---
+
+# Hypothesis Testing: An Overview
+
+## Introduction
+
+The goal of hypothesis testing is to assess the validity of a claim (the **alternative hypothesis**, \( H_1 \)) against a competing assumption (the **null hypothesis**, \( H_0 \)) using sample data.
+
+- We **start by assuming \( H_0 \) is true**.
+- If the sample data provides strong enough evidence against \( H_0 \), we reject it in favor of \( H_1 \).
+- **Failing to reject** \( H_0 \) doesn’t prove it’s true; it simply means we lack strong evidence against it.
+
+> “The process by which we use data to answer questions about parameters is very similar to how juries evaluate evidence about a defendant.” – Geoffrey Vining (1998)
+
+---
+
+# Comparing Two Populations
+
+## Independent Samples
+
+Two samples are independent if selecting a sample from population 1 does not influence the sample from population 2.
+
+### Notation
+
+- \( \mu_1, \mu_2 \): population means  
+- \( \sigma_1, \sigma_2 \): population standard deviations  
+- \( n_1, n_2 \): sample sizes (ideally \( > 30 \))  
+- \( \bar{x}_1, \bar{x}_2 \): sample means  
+- \( s_1, s_2 \): sample standard deviations  
+
+---
+
+## Standard Error of the Difference Between Two Means
+
+When comparing two independent sample means:
+
+\[
+SE(\bar{x}_1 - \bar{x}_2) = \sqrt{ \frac{s_1^2}{n_1} + \frac{s_2^2}{n_2} }
+\]
+
+---
+
+## Example
+
+- Mean male height: 69 inches, \( \sigma = 2.5 \)
+- Mean female height: 65 inches, \( \sigma = 2.5 \)
+- \( n_1 = n_2 = 50 \)
+
+Apply the test for the difference in means assuming known standard deviations.
+
+---
+
+# Confidence Intervals: Worked Example
+
+Ten mercury measurements (ng/ml):  
+23.3, 22.5, 21.9, 21.5, 19.9, 21.3, 21.7, 23.8, 22.6, 24.7
+
+To compute a 99% confidence interval for the mean:
+
+1. Find sample mean \( \bar{x} \) and sample standard deviation \( s \)
+2. Use:
+   \[
+   \bar{x} \pm t_{\alpha/2, \, df} \cdot \frac{s}{\sqrt{n}}
+   \]
+
+With \( df = 9 \), use the appropriate t-quantile for 99% confidence.
+
+---
+
+# Hypothesis Test for Two Means (Known Variances)
+
+If population variances \( \sigma_1^2 \) and \( \sigma_2^2 \) are known, use the following test statistic:
+
+\[
+Z = \frac{(\bar{x}_1 - \bar{x}_2) - (\mu_1 - \mu_2)}{ \sqrt{ \frac{\sigma_1^2}{n_1} + \frac{\sigma_2^2}{n_2} } }
+\]
+
+Compare the result to a critical value from the **Z-table** to determine significance.
+
+---
+
+# F-Test: Equality of Variances
+
+Used to compare the variances of two populations:
+
+\[
+F = \frac{S_X^2}{S_Y^2}
+\]
+
+- Assumes \( H_0 \): variances are equal
+- Compare to the critical value from the **F-distribution** with \( n_1 - 1 \) and \( n_2 - 1 \) degrees of freedom
+
+---
+
+# Fractional Factorial Design: Key Terms
+
+Fractional factorial designs allow you to study multiple factors using a subset of the full factorial design.
+
+### Key Definitions
+
+- **Defining Relation**: Specifies which factor interactions are confounded. It's derived from generators.
+- **Generator**: An equation used to generate the fractional design. It determines which runs are included.
+- **Confounding**: Occurs when two or more effects (usually interactions) are indistinguishable from each other based on the design.
+- **Resolution**: The smallest order of interaction that is confounded with the main effect. Indicates the design’s clarity.
+
+### Optimal Resolution
+
+- **Resolution V** is typically considered optimal in screening experiments:
+  - Main effects are unconfounded with two-factor interactions.
+  - Two-factor interactions may be confounded with each other.
+
+---
+
+Let me know if you'd like help calculating confidence intervals from your mercury dataset or visualizing a fractional factorial design layout.
