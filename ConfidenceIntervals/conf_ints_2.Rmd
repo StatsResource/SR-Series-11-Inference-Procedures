@@ -1,0 +1,132 @@
+# Confidence Intervals and Estimation – A Comprehensive Guide
+
+## 1. Recap: Key Concepts from the Previous Lecture
+
+- **Sampling distributions** and the **Central Limit Theorem**
+- **Standard error**: a measure of variability for sample statistics
+- **Introduction to confidence intervals** for estimating population parameters
+
+---
+
+## 2. Understanding Symmetric Confidence Intervals
+
+- A **symmetric interval** captures a central portion of a probability distribution.
+- If the confidence level is \( 1 - \alpha \), then the **area in each tail** is \( \alpha/2 \).
+
+### Example
+
+For a 95% confidence level:
+- \( \alpha = 0.05 \)
+- Each tail = \( \alpha/2 = 0.025 \)
+
+We want:
+
+\[
+P(-a \leq Z \leq a) = 0.95
+\]
+
+From Z-tables, this gives:
+
+\[
+a = 1.96
+\]
+
+---
+
+## 3. Quick Reference: Normal Distribution Coverage
+
+- \( \mu \pm 1.96\sigma \): 95% of values
+- \( \mu \pm 2.58\sigma \): 99% of values
+
+---
+
+## 4. Formula for Confidence Intervals
+
+\[
+\text{Point Estimate} \pm \text{Quantile} \times \text{Standard Error}
+\]
+
+Where:
+- **Point estimate** = sample mean \( \bar{x} \) or proportion \( \hat{p} \)
+- **Quantile** = Z-value or t-value, depending on sample size and variance knowledge
+- **Standard error** = quantifies variability of the point estimate
+
+---
+
+## 5. Choosing the Right Quantile
+
+- **Use Z-distribution**:
+  - When population variance is known
+  - Or sample size \( n > 30 \)
+
+- **Use t-distribution**:
+  - When population variance is unknown and \( n \leq 30 \)
+  - Degrees of freedom = \( n - 1 \)
+
+---
+
+## 6. The Central Limit Theorem (CLT)
+
+- Regardless of population distribution, the sampling distribution of the sample mean approaches normality as \( n \to \infty \).
+- This is the foundation for constructing confidence intervals.
+
+---
+
+## 7. Calculating Standard Error
+
+### For a Sample Mean
+
+\[
+\text{SE}(\bar{x}) = \frac{\sigma}{\sqrt{n}}
+\]
+
+### For a Sample Proportion
+
+\[
+\text{SE}(\hat{p}) = \sqrt{ \frac{p(1 - p)}{n} }
+\]
+
+---
+
+## 8. Examples
+
+### **Example 1**: Confidence Interval for a Mean
+
+- Sample size: \( n = 625 \)
+- Sample mean: \( \bar{x} = 150 \) grams
+- Sample standard deviation: \( s = 30 \)
+
+\[
+\text{SE}(\bar{x}) = \frac{30}{\sqrt{625}} = \frac{30}{25} = 1.2
+\]
+
+---
+
+### **Example 2**: Confidence Interval for a Proportion
+
+- \( \hat{p} = 0.04 \)
+- \( n = 100 \)
+- 95% confidence level → use Z = 1.96
+
+\[
+\text{SE}(\hat{p}) = \sqrt{ \frac{0.04 \times 0.96}{100} } \approx 0.0196
+\]
+
+\[
+\text{CI} = 0.04 \pm 1.96 \times 0.0196
+\]
+
+---
+
+## 9. Expressing Proportions as Percentages
+
+Let’s revisit with percentage format:
+
+- \( \hat{p} = \frac{144}{200} \times 100\% = 72\% \)
+- Complement: \( 100\% - 72\% = 28\% \)
+
+\[
+\text{SE}(\hat{p}) = \sqrt{ \frac{72 \times 28}{200} } = \sqrt{10.08} \approx 3.175\%
+\]
+
+---
