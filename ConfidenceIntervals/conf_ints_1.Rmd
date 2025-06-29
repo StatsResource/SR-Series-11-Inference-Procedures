@@ -1,0 +1,117 @@
+# Estimation in Statistics
+
+Statistical estimation is the process of using data from a sample to make inferences about a broader population. There are two main types of estimation:
+
+- **Point Estimation**
+- **Interval Estimation**
+
+---
+
+## Point Estimates
+
+A **point estimate** provides a single best guess of a population parameter, based on sample data. It is computed using a **statistic** from the sample.
+
+### Examples
+
+- The **sample mean** \( \bar{x} \) is the best point estimate of the **population mean** \( \mu \).
+- The **sample proportion** \( \hat{p} \) is the best point estimate of the **population proportion** \( p \).
+
+While point estimates are useful, they come with **error**—the actual population value may be higher or lower than the estimate.
+
+---
+
+## Interval Estimates
+
+An **interval estimate**, or confidence interval, provides a **range of values** that is likely to contain the population parameter.
+
+### Key Concepts
+
+- Defined by **lower** and **upper confidence limits**
+- Associated with a **confidence level** (e.g. 90%, 95%, or 99%)
+- Wider intervals offer more certainty that the true value lies within
+
+---
+
+## Confidence Intervals
+
+A confidence interval is computed using:
+
+\[
+\text{Statistic} \pm (\text{Quantile} \times \text{Standard Error})
+\]
+
+Where the **statistic** might be a sample mean or proportion, and the **quantile** depends on the desired confidence level:
+
+### Quantile Selection
+
+- Use the **Z-distribution** if standard deviation is **known**  
+  \[
+  \bar{x} \pm Z_{\alpha/2} \cdot \text{SE}
+  \]
+- Use the **t-distribution** if standard deviation is **unknown**, with \( n-1 \) degrees of freedom  
+  \[
+  \bar{x} \pm t_{\alpha/2, \, n-1} \cdot \text{SE}
+  \]
+
+### Common Quantile Values
+
+| Confidence Level | Z/T Value (Approximate) |
+|------------------|--------------------------|
+| 90%              | 1.645                    |
+| 95%              | 1.96                     |
+| 99%              | 2.58                     |
+
+---
+
+## Margin of Error
+
+The **margin of error (E)** represents half the width of the confidence interval:
+
+\[
+E = \frac{\text{Upper Limit} - \text{Lower Limit}}{2}
+\]
+
+---
+
+## Pooled Proportion Estimate
+
+When comparing two sample proportions, the **pooled estimate** \( \bar{p} \) combines the success counts:
+
+\[
+\bar{p} = \frac{x_1 + x_2}{n_1 + n_2}
+\]
+
+---
+
+## Matched Pairs vs. Independent Samples
+
+### Matched Pairs
+
+- Each observation in one sample is paired with one in the other (e.g. before-and-after measurements)
+- Data should be randomly sampled
+
+### Independent Samples
+
+- Samples drawn separately from two populations
+- No link between observations
+- Samples may have different sizes and variances
+
+If the populations are normally distributed, comparisons are typically made between:
+- Means: \( \bar{x}, \bar{y} \)
+- Variances: \( s_x^2, s_y^2 \)
+
+---
+
+## Standard Error of the Sample Mean
+
+\[
+\text{SE}(\bar{x}) = \frac{\sigma}{\sqrt{n}}
+\]
+
+Where:
+- \( \sigma \): population standard deviation
+- \( n \): sample size
+
+This formula is key when calculating confidence intervals or hypothesis tests involving the sample mean.
+
+---
