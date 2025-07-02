@@ -1,0 +1,283 @@
+Here’s your material reformatted into a clean **Markdown tutorial** on hypothesis testing—free from emojis, clearly organized, and structured for clarity.
+
+---
+
+# Introduction to Hypothesis Testing
+
+## What Is Hypothesis Testing?
+
+- A statistical method used to make decisions based on data.
+- A result is called **statistically significant** if it is unlikely to occur by chance.
+- Comparable to a legal trial:
+  - Presume innocence ($H_0$) until proven guilty ($H_1$).
+  - Evidence must justify rejecting $H_0$ in favor of $H_1$.
+
+---
+
+## Null and Alternative Hypotheses
+
+### Definitions
+
+- **Null Hypothesis ($H_0$)**: A statement about a population parameter (e.g., the population mean $\mu$).
+- **Alternative Hypothesis ($H_1$)**: The opposite of the null hypothesis.
+- Hypothesis testing evaluates whether to reject $H_0$ based on data.
+
+---
+
+## The Null Hypothesis
+
+- Usually represents existing assumptions or no effect.
+- Sometimes constructed to challenge what the experimenter believes.
+- Example: In sleep research, $H_0$ might assume **no effect** of sleep deprivation.
+
+### Logic of Testing
+
+- **Assume $H_0$ is true**.
+- Compute the probability of observing data **as extreme** as the actual outcome.
+- If this probability is small, we reject $H_0$.
+
+---
+
+## Critical Region
+
+- The **critical region** is the set of all values that lead to rejecting $H_0$.
+- Selected based on significance level and distribution of the test statistic.
+
+---
+
+## Writing the Null Hypothesis
+
+- Denoted: $$H_0$$
+- Should:
+  - Refer to a population parameter
+  - Include a condition of equality (`=`, `≤`, or `≥`)
+
+### Examples
+
+```markdown
+H₀: μ = 350 → Population mean is 350  
+H₀: π = 70% → Population proportion is 70%  
+H₀: μ ≤ 100 → Mean is less than or equal to 100  
+H₀: π ≥ 60% → Proportion is at least 60%
+```
+
+---
+
+## Dice Example: Null Hypothesis
+
+- Suppose we roll a die 100 times.
+- If we assume it's fair, expected result ≈ 350.
+- Null hypothesis:  
+  $$H_0: \mu = 350$$ (die is fair)
+
+---
+
+## Writing the Alternative Hypothesis
+
+- Denoted: $$H_1$$ or $$H_a$$
+- Must:
+  - Represent the opposite claim
+  - Avoid equality symbols
+  - Use `$>`, `$<`, or `$\neq$`
+
+### Examples
+
+```markdown
+H₀: μ = 350 → H₁: μ ≠ 350  
+H₀: π = 70% → H₁: π ≠ 70%  
+H₀: μ ≤ 100 → H₁: μ > 100  
+H₀: π ≥ 60% → H₁: π < 60%
+```
+
+---
+
+## Determining the Number of Tails
+
+- Based on $H_1$:
+  - `$>` or `$<` → One-tailed test
+  - `$\neq$` → Two-tailed test
+
+### Rule of Thumb
+
+- Ask: How many alternatives to $H_0$ are presented by $H_1$?
+
+---
+Here’s your content structured as a clean and focused **Markdown tutorial** on significance levels, p-values, and hypothesis testing procedures. No emojis—just clarity and consistent formatting.
+
+---
+
+# Significance Level and Hypothesis Testing
+
+## What Is a Significance Level?
+
+- The **significance level**, denoted by $\alpha$, is the threshold used to decide whether to **reject the null hypothesis ($H_0$)**.
+- Common choices:  
+  - $\alpha = 0.05$ → 5% significance level  
+  - $\alpha = 0.01$ → 1% significance level
+
+### Usage in Testing
+
+1. Compute the difference between observed results and the null hypothesis.
+2. Assume $H_0$ is true and calculate the probability of observing such a result.
+3. Compare this **probability** to the significance level:
+   - If $$\text{p-value} \leq \alpha$$ → **Reject $H_0$**  
+   - Result is **statistically significant**
+
+---
+
+## Interpreting the Test Decision
+
+Statistical reasoning follows two possible explanations:
+
+1. A very unlikely event occurred.
+2. The null hypothesis is false.
+
+The conventional conclusion:  
+- The data contradict the null hypothesis strongly enough to **reject $H_0$**, but not to **prove** it's false.
+
+---
+
+## Die Throw Example
+
+- Suppose a die is thrown 100 times and the total sum is **401**.
+- Simulations show a fair die yields this result only **1.75%** of the time.
+- Under a crooked die scenario, the result is common.
+- Conclusion: **Reasonable to suspect the die is biased**, but we cannot prove it definitively.
+- Raises the topic of **Type I and II errors** (discussed later).
+
+---
+
+## Properties of Significance Level ($\alpha$)
+
+- It is the **probability of a Type I error**—rejecting $H_0$ when it is true.
+- Also described as the probability of the test statistic falling into the **critical region** when $H_0$ is true.
+- Lower $\alpha$ → More stringent test → Requires stronger evidence to reject $H_0$
+
+---
+
+## Relationship Between p-Value and Significance
+
+- The **p-value** measures how extreme the observed data are, assuming $H_0$ is true.
+- If $$p \leq \alpha$$ → **Reject $H_0$**
+- A common misunderstanding:
+  - $$p = 0.0175$$ does **not** mean there’s a 1.75% chance $H_0$ is true.
+  - It **does** mean: there's a 1.75% chance of observing such extreme data under $H_0$
+
+---
+
+# Hypothesis Testing Procedures
+
+## Procedure 1: Based on p-value
+
+1. **State the null and alternative hypotheses**
+2. **Compute test statistic**  
+   - E.g., Z or t score
+3. **Calculate p-value**
+4. **Compare to significance level and decide**
+   - $$p \leq \alpha$$ → Reject $H_0$  
+   - $$p > \alpha$$ → Do not reject $H_0$
+
+---
+
+## Procedure 2: Based on Critical Value
+
+Designed for written exams; similar structure.
+
+1. **State the null and alternative hypotheses**
+2. **Compute test statistic**
+3. **Determine critical value**  
+   - Based on chosen $\alpha$ and distribution
+4. **Decision Rule**  
+   - If test statistic is more extreme than critical value → **Reject $H_0**
+
+---
+Here's a clean and fully consolidated **Markdown tutorial** based on your material, covering test statistics, critical values, and hypothesis testing procedures—formatted for clarity, consistency, and instructional flow.
+
+---
+
+# Hypothesis Testing: Test Statistics and Critical Values
+
+## What Is a Test Statistic?
+
+- A **test statistic** is a value calculated from sample data.
+- It helps determine whether to **reject the null hypothesis ($H_0$)**.
+- Its structure varies depending on:
+  - The probability model assumed
+  - The nature of $H_0$ and $H_1$
+
+### General Formula:
+
+$$
+TS = \frac{\text{Observed Value} - \text{Hypothesized Value}}{\text{Standard Error}}
+$$
+
+### Example: Dice Experiment
+
+- Observed sum: 401  
+- Hypothesized sum under $H_0$: 350  
+- Standard error: 17.07  
+- Test statistic:  
+  $$ TS = \frac{401 - 350}{17.07} \approx 2.99 $$
+
+---
+
+## What Is a Critical Value?
+
+- A **critical value (CV)** is a cutoff value that defines the boundary of the **critical region**.
+- It depends on:
+  - Chosen significance level $\alpha$ (e.g. 0.05)
+  - Whether the test is **one-tailed** or **two-tailed**
+  - Sample size and degrees of freedom
+
+### Determination:
+
+- The critical value is computed similarly to quantiles in confidence intervals.
+- For small samples, use degrees of freedom $df = n - 1$  
+- For large samples, approximate with $df = \infty$
+
+---
+
+## One-Tailed vs. Two-Tailed Tests
+
+### One-Tailed Test
+
+- The rejection region is **entirely in one tail** of the distribution.
+- Triggered by $H_1$ of form:  
+  - $H_1: \mu > \mu_0$ or $H_1: \mu < \mu_0$
+
+### Two-Tailed Test
+
+- The rejection region is **split between both tails**.
+- Triggered by $H_1$ of form:  
+  - $H_1: \mu \ne \mu_0$
+
+---
+
+## Critical Region & Decision Rule
+
+- The **critical region (CR)** is where we reject $H_0$.
+- The sample space is divided into:
+  - Critical region: $$|TS| > CV$$ → Reject $H_0$
+  - Non-critical region: $$|TS| \leq CV$$ → Do not reject $H_0$
+
+### Dice Example Decision:
+
+- $$TS = 2.99$$  
+- $$CV = 1.96$$ (for $\alpha = 0.05$ two-tailed test)  
+- Since $$|2.99| > 1.96$$ → **Reject $H_0$**  
+- Interpretation: It's unlikely the die is fair
+
+---
+
+## Four-Step Hypothesis Testing Procedure
+
+1. **State Hypotheses**  
+   - Define $H_0$ and $H_1$
+2. **Compute Test Statistic**  
+   - Standardize observed data using appropriate formula
+3. **Determine Critical Value or Compute p-value**  
+   - Use significance level and test type
+4. **Make Decision**  
+   - Reject $H_0$ if test statistic is in critical region or if p-value < $\alpha$
+
+---
