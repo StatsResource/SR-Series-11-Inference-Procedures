@@ -1,0 +1,100 @@
+Absolutely, Kevin! Here's the revised **Markdown tutorial** with all emojis removed and preserved formatting:
+
+---
+
+# Hypothesis Test for the Mean of a Single Sample
+
+This procedure evaluates whether the **population mean ($\mu$)** matches a hypothesized value using sample statistics.
+
+---
+
+## Types of One-Sample Mean Tests
+
+Two types of tests exist depending on knowledge of population parameters:
+
+1. **Known $\sigma$**:  
+   The sample comes from a normal distribution and the **population standard deviation** is known. Use a **Z-test**.
+
+2. **Unknown $\sigma$ (most common case)**:  
+   The sample comes from a normal distribution and $\sigma$ is **estimated by sample standard deviation ($s$)**. Use a **Student’s $t$-test**.
+
+In most real-world scenarios, $\sigma$ is unknown—so we proceed using the *t*-test method.
+
+---
+
+## Hypotheses
+
+Example setup for a two-sided test:
+
+$$
+H_0: \mu = 40\ \text{kg} \quad \text{(null hypothesis)} \\
+H_1: \mu \neq 40\ \text{kg} \quad \text{(alternative hypothesis)}
+$$
+
+---
+
+## Test Statistic Formula
+
+For a single-sample $t$-test:
+
+$$
+t = \frac{\bar{x} - \mu_0}{s / \sqrt{n}}
+$$
+
+Where:
+- $\bar{x}$ = sample mean  
+- $\mu_0$ = hypothesized population mean  
+- $s$ = sample standard deviation  
+- $n$ = sample size  
+- Degrees of freedom: $$df = n - 1$$
+
+---
+
+## Worked Example
+
+A sample of 25 Irish students has:
+- Sample mean: $\bar{x} = 174\ \text{cm}$  
+- Sample variance: $100\ \text{cm}^2$ → so $s = \sqrt{100} = 10$  
+- Hypothesized mean: $\mu_0 = 170$  
+- Significance level: $\alpha = 0.05$
+
+### Apply Formula:
+
+$$
+t = \frac{174 - 170}{10 / \sqrt{25}} = \frac{4}{2} = 2.00
+$$
+
+Compare this $t$ value to the critical value for $df = 24$ at $\alpha/2 = 0.025$ (for a two-tailed test).
+
+---
+
+## Two-Sided Test Logic
+
+Used when deviations in **either direction** from $\mu_0$ are of concern.
+
+- Reference point: hypothesized mean ($\mu_0$)
+- Decision: if $$|t| > t_{df,\alpha/2}$$ → **Reject $H_0$**
+
+---
+
+## Final Summary
+
+### When testing a population mean:
+- Use a **$t$-test** if $\sigma$ is unknown (most common scenario)
+- State $H_0$ and $H_1$
+- Compute the **test statistic** using sample mean and sample SD
+- Evaluate against critical values or use **p-value**
+
+### Notes:
+- Strong conclusions require **small p-values** and appropriate sample sizes
+- Hypothesis tests and confidence intervals share the same structure:
+  - Same standard errors
+  - Same quantiles from $Z$ or $t$ distributions
+
+### For Proportions:
+- Hypothesis tests for sample proportions follow similar steps  
+- Standard error is based on expected value under $H_0$ (not sample estimate)
+
+---
+
+If you’d like a compiled handout or a version for Jupyter or Quarto formats, just say the word.
