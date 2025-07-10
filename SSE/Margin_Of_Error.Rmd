@@ -1,0 +1,14 @@
+
+\begin{frame}
+\frametitle{Margin of Error}
+
+\begin{itemize}
+\item The product of the quantile and the standard error give us the width of the confidence interval
+\item The width of the confidence interval is known as the \textbf{\emph{margin of error}}.  \[ \mbox{Margin of Error}  = \left[ \mbox{Quantile} \times \mbox{Standard Error} \right] \]
+\item The margin of error gives us some idea about how uncertain we are about the unknown population parameter. \item A very wide interval may indicate that more data should be collected before anything very definite can be said about the parameter.
+\item The only way to control the margin of error is to adjust the sample size accordingly.
+\item By choosing an appropriate sample size, it is possible to ensure that the margin of error does not excess a certain threshold.
+\end{itemize}
+
+\end{frame}
+
