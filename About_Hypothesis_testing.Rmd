@@ -1,140 +1,100 @@
-﻿\documentclass[a4]{beamer}
-\usepackage{amssymb}
-\usepackage{graphicx}
-\usepackage{subfigure}
-\usepackage{newlfont}
-\usepackage{amsmath,amsthm,amsfonts}
-%\usepackage{beamerthemesplit}
-\usepackage{pgf,pgfarrows,pgfnodes,pgfautomata,pgfheaps,pgfshade}
-\usepackage{mathptmx}  % Font Family
-\usepackage{helvet}   % Font Family
-\usepackage{color}
+Here’s a clean and well-organized version of your slides on hypothesis testing, formatted in Markdown for clarity and readability:
 
-\mode<presentation> {
- \usetheme{Default} % was Frankfurt
- \useinnertheme{rounded}
- \useoutertheme{infolines}
- \usefonttheme{serif}
- %\usecolortheme{wolverine}
-% \usecolortheme{rose}
-\usefonttheme{structurebold}
-}
+---
 
-\setbeamercovered{dynamic}
+# Types of Inference Procedures
 
-\title[MathsCast]{MathsCast Presentations \\ {\normalsize The Continuous Uniform Distribution}}
-\author[Kevin O'Brien]{Kevin O'Brien \\ {\scriptsize kevin.obrien@ul.ie}}
-\date{Summer 2011}
-\institute[Maths \& Stats]{Dept. of Mathematics \& Statistics, \\ University \textit{of} Limerick}
+- The two main types of inference procedures are:
+  - Confidence intervals
+  - Hypothesis tests
+- There are two approaches to conducting a hypothesis test:
+  1. Compute the test statistic and compare it to critical values.
+  2. Compute the p-value and compare it to the significance level.
+- Most statistical software uses the p-value approach.
+- In this course, we will focus primarily on the p-value method.
 
-\renewcommand{\arraystretch}{1.5}
+---
 
+# Hypothesis Tests
 
-%------------------------------------------------------------------------%
-\begin{document}
-%----------------------------------------------------------------------------------------------------%
+- A hypothesis test is a method for making decisions using experimental data.
+- A result is said to be **statistically significant** if it is unlikely to have occurred by chance.
+- The process is analogous to a legal trial:
+  - The null hypothesis is like the presumption of innocence.
+  - The alternative hypothesis is like the prosecution’s claim.
+  - Only strong evidence (data) can overturn the null hypothesis.
 
+---
 
+# Null and Alternative Hypotheses
 
+- The **null hypothesis** (\(H_0\)) is a statement about a population parameter (e.g., the population mean \(\mu\)).
+- The goal of hypothesis testing is to assess the viability of \(H_0\) in light of the data.
+- The **alternative hypothesis** (\(H_1\)) represents a competing claim.
+- Based on the data, we either:
+  - Reject \(H_0\) in favor of \(H_1\), or
+  - Fail to reject \(H_0\) (insufficient evidence).
 
-%--------------------------------------------------------------------------------------------------------------------------%
+---
 
+# Understanding the Null Hypothesis
 
-\begin{frame}
-\frametitle{Types of inference procedures}
-\large
-\begin{itemize}
-\item The two main types of inference procedures are confidence intervals and hypothesis tests .\item There are two ways of conducting a hypothesis test.\item  One method is to compute the test statistic, and compare to the critical values.\item The second method is to compute the probability value (p-value), and compare it to the significance level.\item Nearly all computer programs use the p-value approach. In this course we will focus more on the p-value approach.
-\end{itemize}
-\end{frame}
+- The null hypothesis often represents the status quo or a claim the researcher seeks to challenge.
+- Example: In a study on sleep deprivation, the null hypothesis might state that sleep deprivation has no effect.
+- If the data show a strong enough effect, we reject the null hypothesis.
 
+---
 
-%--------------------------------------------------------------------------------------------------------------------------%
-\begin{frame}
-\frametitle{Hypothesis tests}
-\large
-\begin{itemize} \item
-In statistics , a  hypothesis test is a method of making decisions using experimental data. \item A result is called \textbf{\emph{statistically significant}} if it is unlikely to have occurred by chance. \item A statistical test procedure is comparable to a trial where a defendant is considered innocent as long as his guilt is not proven.\item  The prosecutor tries to prove the guilt of the defendant. Only when there is enough charging evidence the defendant is condemned.
-\end{itemize}
+# Formal Definition of the Null Hypothesis
 
-\end{frame}
+- A hypothesis is a claim about a population property.
+- A hypothesis test (or test of significance) evaluates that claim.
+- The null hypothesis:
+  - Is a statement about a population parameter.
+  - Is denoted \(H_0\).
+  - Must include a condition of equality (e.g., \(=\), \(\leq\), or \(\geq\)).
 
+---
 
-%--------------------------------------------------------------------------------------------------------------------------%
-\begin{frame}
-\frametitle{Hypothesis tests (Null and Alternative Hypotheses) }
-\large
-%The phrase "test of significance" was coined by Ronald Fisher; 
-%"Critical tests of this kind may be called tests of significance, and when such tests are available we may discover whether a second sample is or is not significantly different from the first." \\
-\begin{itemize}
-\item The null hypothesis (denoted $H_0$)is an hypothesis about a population parameter, such as the population mean $\mu$. \item The purpose of hypothesis testing is to test the viability of the null hypothesis in the light of experimental data. \item The alternative hypothesis $H_1$ expresses the exact opposite of the null hypothesis. \item Depending on the data, the null hypothesis either will or will not be rejected as a viable possibility in favour of the alternative hypothesis. 
-\end{itemize}
+# Interpreting Hypothesis Tests
 
-\end{frame}
+- Hypothesis tests typically ask:
+  > “Assuming the null hypothesis is true, what is the probability of observing a result as extreme as the one obtained?”
+- The **critical region** is the set of outcomes that lead us to reject \(H_0\).
+- Choosing the critical region is somewhat subjective and depends on the context.
 
+---
 
-%--------------------------------------------------------------------------------------------------------------------------%
-\begin{frame}
-\frametitle{The Null  Hypothesis }
-\large
-\begin{itemize}\item 
-The null hypothesis is often the reverse of what the experimenter actually believes; it is put forward to allow the data to contradict it. \item In a hypothetical experiment on the effect of alcohol, the experimenter probably expects sleep deprivation to have a harmful effect. \item If the experimental data show a sufficiently large effect of sleep deprivationl, then the null hypothesis that sleep deprivationl has no effect can be rejected. 
-\end{itemize}
-\end{frame}
+# Significance Level
 
-%----------------------------------------------------------------------------------------------------%
-\frame{
-\frametitle{The Null Hypothesis}
-In statistics, a hypothesis is a claim or statement made around a proprty of a population.
-A hypothesis test ( also called a test of significance)  is a standard procedure for testing a claim aboutt that property.
-\begin{itemize}
-\item The null hypothesis is a statement about the value of a population parameter.
-\item The null hypothesis is denoted $H_0$.
-\item It must contain a condition of equality. (i.e. ` = ' , `$ \leq$' or `$\geq$')
-\end{itemize}
-}
+- The **significance level** (\(\alpha\)) is the threshold for rejecting the null hypothesis.
+- The process:
+  1. Measure the difference between the observed result and what \(H_0\) predicts.
+  2. Calculate the probability of observing such a difference (or more extreme), assuming \(H_0\) is true.
+  3. Compare this probability to \(\alpha\).
+- If the probability ≤ \(\alpha\), reject \(H_0\); the result is statistically significant.
 
-%--------------------------------------------------------------------------------------------------------------------------%
-\begin{frame}
-\frametitle{The Null  Hypothesis }
-\large
-\begin{itemize}
-\item Hypothesis tests are almost always made using null-hypothesis tests i.e., tests that answer the question “Assuming that the null hypothesis is true, what is the probability of observing a value for the test statistic that is at least as extreme as the value that was actually observed?” 
-\item
-The critical region of a hypothesis test is the set of all outcomes which, if they occur, will lead us to decide that there is a difference. 
-\item That is, cause the null hypothesis to be rejected in favour of the alternative hypothesis. 
-\item Selecting a suitable critical region is arbitrary.
-\end{itemize}
-\end{frame}
+---
 
+# Choosing a Significance Level
 
-%--------------------------------------------------------------------------------------------------------------------------%
-\begin{frame}
-\frametitle{Significance Level}
+- Common choices for \(\alpha\):
+  - 0.05 (5% level)
+  - 0.01 (1% level)
+- A lower \(\alpha\) means stronger evidence is required to reject \(H_0\).
+- The Greek letter \(\alpha\) is used to denote the significance level.
 
-\begin{itemize}
-\item In hypothesis testing, the significance level is the criterion used for rejecting the null hypothesis. \item The significance level is used in hypothesis testing as follows: First, the difference between the results of the experiment and the null hypothesis is determined. \item Then, assuming the null hypothesis is true, the probability of a difference that large or larger is computed . \item Finally, this probability is compared to the significance level.\item  If the probability is less than or equal to the significance level, then the null hypothesis is rejected and the outcome is said to be statistically significant. 
-\end{itemize}
-\end{frame}
+---
 
+# The p-Value
 
-%--------------------------------------------------------------------------------------------------------------------------%
-\begin{frame}
-\frametitle{Significance Level}
+- The **p-value** is the probability of obtaining a result as extreme or more extreme than the observed statistic, assuming \(H_0\) is true.
+- It quantifies the strength of evidence against the null hypothesis.
+- A smaller p-value indicates stronger evidence against \(H_0\).
 
-\begin{itemize}
-\item Traditionally, experimenters have used either the 0.05 level (sometimes called the 5\% level) or the 0.01 level (1\% level), although the choice of levels is largely subjective. \item The lower the significance level, the more the data must diverge from the null hypothesis to be significant. \item Therefore, the 0.01 level is more conservative than the 0.05 level. The Greek letter alpha ($\alpha$) is sometimes used to indicate the significance level \end{itemize}
-\end{frame}
-%---------------------------------------------------------------------------------------------------------------------------%
-\begin{frame}
-\frametitle{The probability value }
-\begin{itemize}
-\item The probability value (sometimes called the p value) is the probability of obtaining a statistic as different from or more different from the parameter specified in the null hypothesis as the statistic obtained in the experiment. 
-\item The precise meaning of the p-value
-\end{itemize}
-\end{frame}
+---
 
-
+Let me know if you'd like this turned into a slide deck, printable handout, or visual summary!
 
 %--------------------------------------------------------------------------------------------------------------------------%
 \begin{frame}
