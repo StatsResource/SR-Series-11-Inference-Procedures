@@ -1,0 +1,83 @@
+Here’s your full set of notes, streamlined and formatted in tidy Markdown for clarity and flow:
+
+---
+
+# Interpreting Confidence Intervals
+
+### Key Ideas:
+- Confidence intervals are two bounds that define a plausible range for a population parameter.
+- When comparing two group means, the confidence interval for the difference helps assess whether one group is significantly higher than the other.
+
+### Example Scenario:
+- Suppose \( \bar{x}_B - \bar{x}_A = 30 \) (i.e., Group B scores 30 points higher on average).
+- A 95% confidence interval is given as \( (-15, 75) \).
+
+#### Interpretation:
+- **Upper bound (+75)**: Group B could be up to 75 points higher than Group A.
+- **Lower bound (−15)**: Group A could be up to 15 points higher than Group B.
+- **Zero is within the interval**: So it’s possible both groups have equal means.
+- Conclusion: We cannot be 95% confident that Group B scores higher than Group A.
+
+---
+
+# Confidence Interval Basics
+
+### Point Estimation and Accuracy
+- The sample mean \( \bar{x} \) is an **unbiased estimator** of the population mean \( \mu \).
+- However, the probability that \( \bar{x} \) exactly equals \( \mu \) is mathematically zero.
+- To express **uncertainty**, we use a confidence interval around \( \bar{x} \).
+
+### Confidence Interval Definition
+A confidence interval provides a range where the true population parameter is expected to fall with a specified level of confidence (e.g., 95%).
+
+- The confidence level (e.g., 95%) means that if we repeated the sampling many times, **95% of the constructed intervals** would contain the true mean.
+
+---
+
+## Formula Structure
+
+\[
+\text{Confidence Interval} = \bar{x} \pm Z \cdot SE
+\]
+
+- \( \bar{x} \): sample mean  
+- \( Z \): quantile from the normal or t-distribution  
+- \( SE \): standard error  
+- The term \( \pm Z \cdot SE \) is often referred to as the **margin of error**
+
+---
+
+# Distribution Guidelines
+
+- Use **normal distribution** for large samples (\( n > 30 \))
+- Use **t-distribution** if:
+  - Sample is small (\( n \leq 30 \))
+  - Population is normally distributed
+  - Population standard deviation \( \sigma \) is unknown
+
+### Degrees of Freedom:
+\[
+df = n - 1
+\]
+
+---
+
+## Battery Example: Calculating a CI
+
+- Sample size: \( n = 100 \)
+- Sample mean: \( \bar{x} = 57.4 \) hours
+- Sample standard deviation: \( s = 15.1 \)
+- Confidence level: 95%
+- Since \( n = 100 \), use normal distribution → \( Z = 1.96 \)
+
+### Calculation:
+\[
+SE = \frac{15.1}{\sqrt{100}} = 1.51
+\]
+\[
+CI = 57.4 \pm (1.96 \cdot 1.51) = (54.44,\ 60.36)
+\]
+
+---
+
+Let me know if you want practice problems or a summary card version of this!
