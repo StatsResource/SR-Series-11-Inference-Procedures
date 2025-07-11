@@ -1,0 +1,96 @@
+# F-Test for Equality of Variances
+
+## Test Statistic
+
+\[
+F = \frac{S_X^2}{S_Y^2}
+\]
+
+- Has an **F-distribution** with degrees of freedom:
+  - \( \nu_1 = n - 1 \) (sample with larger variance)
+  - \( \nu_2 = m - 1 \) (sample with smaller variance)
+
+## Hypotheses
+
+- \( H_0 \): \( \sigma_X^2 = \sigma_Y^2 \) — both population variances are equal  
+- \( H_a \): \( \sigma_X^2 \neq \sigma_Y^2 \) — variances are different
+
+## Notes
+
+- Divide the **larger variance** by the **smaller variance**.
+- Use tabulated F values (typically for significance level \( \alpha = 0.05 \)).
+- Always check the correct degrees of freedom in F-distribution tables.
+
+---
+
+# Interpreting p-values
+
+The **p-value** is the probability of obtaining our observed data—or more extreme—assuming the null hypothesis \( H_0 \) is true.
+
+- Smaller p-value → stronger evidence against \( H_0 \)
+- If p-value is **sufficiently small**, we reject \( H_0 \) in favor of \( H_a \)
+
+### Simplified Interpretation System
+
+- \( p < 0.02 \): Reject \( H_0 \)
+- \( p > 0.05 \): Fail to reject \( H_0 \)
+- \( 0.02 \leq p \leq 0.05 \): Inconclusive
+
+### Test Type Reference
+
+| Test Type      | p-value threshold | Conclusion                   |
+|----------------|-------------------|------------------------------|
+| One-sided test | > 0.05            | No evidence against \( H_0 \)  
+|                | < 0.05            | Evidence against \( H_0 \)     
+| Two-sided test | > 0.025           | No evidence against \( H_0 \)  
+|                | < 0.025           | Evidence against \( H_0 \)     
+
+---
+
+# Hypothesis Testing: Two Independent Populations
+
+### Definitions and Notation
+
+| Symbol       | Description                                   |
+|--------------|-----------------------------------------------|
+| \( p_1, p_2 \)   | Population proportions                        |
+| \( \sigma_1, \sigma_2 \) | Population standard deviations               |
+| \( n_1, n_2 \)   | Sample sizes from population 1 and 2          |
+| \( x_1, x_2 \)   | Sample means                                   |
+| \( s_1, s_2 \)   | Sample standard deviations                     |
+
+### Hypotheses
+
+- \( H_0: \pi_1 = \pi_2 \)  
+- \( H_1: \pi_1 \neq \pi_2 \)  
+  Or equivalently:  
+- \( H_0: \pi_1 - \pi_2 = 0 \)  
+- \( H_1: \pi_1 - \pi_2 \neq 0 \)
+
+---
+
+## Example: Comparing Two Proportions
+
+- **Significance Level**: \( \alpha = 0.01 \)
+
+### Step 1: Pooled Proportion
+
+\[
+\bar{p} = \frac{29 + 62}{1110 + 1553} \approx 0.0331
+\]
+
+### Step 2: Standard Error
+
+\[
+SE(p_1 - p_2) = \sqrt{ \bar{p}(1 - \bar{p}) \left( \frac{1}{n_1} + \frac{1}{n_2} \right) } = 0.007123
+\]
+
+### Step 3: Test Statistic
+
+\[
+TS = \frac{(p_1 - p_2) - 0}{SE(p_1 - p_2)} = -1.965
+\]
+
+---
+
+Let me know if you’d like to walk through critical values for this test, or how to use the result for decision-making in your analysis.
