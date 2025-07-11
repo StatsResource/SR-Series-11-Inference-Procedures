@@ -23,29 +23,6 @@ F = \frac{S_X^2}{S_Y^2}
 
 ---
 
-# Interpreting p-values
-
-The **p-value** is the probability of obtaining our observed data—or more extreme—assuming the null hypothesis \( H_0 \) is true.
-
-- Smaller p-value → stronger evidence against \( H_0 \)
-- If p-value is **sufficiently small**, we reject \( H_0 \) in favor of \( H_a \)
-
-### Simplified Interpretation System
-
-- \( p < 0.02 \): Reject \( H_0 \)
-- \( p > 0.05 \): Fail to reject \( H_0 \)
-- \( 0.02 \leq p \leq 0.05 \): Inconclusive
-
-### Test Type Reference
-
-| Test Type      | p-value threshold | Conclusion                   |
-|----------------|-------------------|------------------------------|
-| One-sided test | > 0.05            | No evidence against \( H_0 \)  
-|                | < 0.05            | Evidence against \( H_0 \)     
-| Two-sided test | > 0.025           | No evidence against \( H_0 \)  
-|                | < 0.025           | Evidence against \( H_0 \)     
-
----
 
 # Hypothesis Testing: Two Independent Populations
 
@@ -92,5 +69,3 @@ TS = \frac{(p_1 - p_2) - 0}{SE(p_1 - p_2)} = -1.965
 \]
 
 ---
-
-Let me know if you’d like to walk through critical values for this test, or how to use the result for decision-making in your analysis.
