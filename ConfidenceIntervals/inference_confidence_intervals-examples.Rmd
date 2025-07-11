@@ -1,0 +1,101 @@
+# Confidence Interval Examples
+
+## Example A: Confidence Interval for the Mean
+
+- Sample size: \( n = 15 \)
+- Sample mean: \( \bar{x} = 94.2 \)
+- Sample variance: \( s^2 = 24.86 \)
+- Confidence level: 99%
+- Degrees of freedom: \( df = 14 \)
+- Critical value: \( t_{14, 0.005} = 2.977 \)
+
+### Calculation
+
+\[
+CI = 94.2 \pm 2.977 \cdot \sqrt{ \frac{24.86}{15} } = 94.2 \pm 3.83
+\]
+
+**99% Confidence Interval**: \( (90.37,\ 98.03) \)
+
+---
+
+## Example B: Paired t-Test Data (Identical Observations)
+
+|      | Value 1 | Value 2 | Value 3 | Value 4 | Value 5 | Value 6 |
+|------|---------|---------|---------|---------|---------|---------|
+| X    | 5.20    | 5.15    | 5.17    | 5.16    | 5.19    | 5.15    |
+| Y    | 5.20    | 5.15    | 5.17    | 5.16    | 5.19    | 5.15    |
+
+> Since X and Y are identical, the differences are all zero, and the paired t-test would yield a mean difference of 0 and no statistical significance.
+
+---
+
+## Example C: Confidence Interval for pH using R
+
+Seven measurements of pH:
+
+\[
+\{5.12,\ 5.20,\ 5.15,\ 5.17,\ 5.16,\ 5.19,\ 5.15\}
+\]
+
+### R Code
+
+```r
+x <- c(5.12, 5.20, 5.15, 5.17, 5.16, 5.19, 5.15)
+n <- length(x)
+alpha <- 0.05
+stderr <- sd(x) / sqrt(n)
+LB <- mean(x) + qt(alpha/2, df = 6) * stderr
+UB <- mean(x) + qt(1 - alpha/2, df = 6) * stderr
+```
+
+### Output
+
+- Lower Bound: **5.137975**
+- Upper Bound: **5.187739**
+
+**95% Confidence Interval**: \( (5.138,\ 5.188) \)
+
+---
+
+## Example D: Hypothesis Test Comparing Two Means
+
+A study compares study hours for women and men:
+
+- Women: \( n_1 = 10,\ \bar{x}_1 = 120,\ \sigma_1 = 28 \)
+- Men: \( n_2 = 12,\ \bar{x}_2 = 105,\ \sigma_2 = 35 \)
+
+### Hypotheses
+
+- \( H_0: \mu_1 = \mu_2 \)
+- \( H_a: \mu_1 > \mu_2 \) (One-tailed test)
+
+### R Code
+
+```r
+xbar1 <- 120
+xbar2 <- 105
+sd1 <- 28
+sd2 <- 35
+n1 <- 10
+n2 <- 12
+TS <- (xbar1 - xbar2) / sqrt((sd1^2 / n1) + (sd2^2 / n2))
+```
+
+- Test Statistic: **1.116536**
+- Critical Value (one-tailed, 95% confidence): **1.644854**
+
+### Conclusion
+
+- Since \( 1.116536 < 1.644854 \), fail to reject \( H_0 \)
+- Not enough evidence to conclude that women study more than men
+
+### p-value Calculation
+
+```r
+1 - pnorm(1.116536)  # OR use lower.tail = FALSE
+```
+
+- p-value: **0.1320964**
+
+---
