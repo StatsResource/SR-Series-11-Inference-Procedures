@@ -1,0 +1,24 @@
+
+## 4. Understanding p-values
+
+- The **p-value** is the probability of obtaining a result as extreme as (or more extreme than) the observed one, assuming the null hypothesis is true.
+- If the p-value is **less than the significance level \( \alpha \)** (e.g., 0.05), reject \( H_0 \).
+
+### Example:
+
+- \( p = 0.042 \): Reject \( H_0 \) at the 0.05 level
+- \( p = 0.0001 \): Also leads to rejection at 0.05, but with stronger evidence
+
+There’s a debate:
+- **Traditional view:** p-values only determine whether to reject or not, based on \( \alpha \)
+- **Modern view:** Smaller p-values offer **stronger evidence** against \( H_0 \)
+
+---
+
+## 5. Interpreting p-values Thoughtfully
+
+- A **very small** p-value suggests stronger evidence against the null hypothesis.
+- **Reporting exact p-values** allows readers to judge strength of evidence themselves.
+- Example: \( p = 0.0001 \) is more compelling than \( p = 0.049 \), even though both cross the 0.05 threshold.
+
+---
