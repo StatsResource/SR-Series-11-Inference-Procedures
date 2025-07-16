@@ -1,27 +1,3 @@
-# F-Test for Equality of Variances
-
-## Test Statistic
-
-\[
-F = \frac{S_X^2}{S_Y^2}
-\]
-
-- Has an **F-distribution** with degrees of freedom:
-  - \( \nu_1 = n - 1 \) (sample with larger variance)
-  - \( \nu_2 = m - 1 \) (sample with smaller variance)
-
-## Hypotheses
-
-- \( H_0 \): \( \sigma_X^2 = \sigma_Y^2 \) — both population variances are equal  
-- \( H_a \): \( \sigma_X^2 \neq \sigma_Y^2 \) — variances are different
-
-## Notes
-
-- Divide the **larger variance** by the **smaller variance**.
-- Use tabulated F values (typically for significance level \( \alpha = 0.05 \)).
-- Always check the correct degrees of freedom in F-distribution tables.
-
----
 
 
 # Hypothesis Testing: Two Independent Populations
