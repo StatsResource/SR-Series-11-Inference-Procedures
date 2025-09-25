@@ -1,21 +1,16 @@
+# 15. Sample Size Estimation
 
-\chapter{15. Sample Size Estimation}
+## Margin of Error
 
-\textbf{Margin of Error}
-
-\begin{itemize}
-\item  The product of the quantile and the standard error give us the width of the confidence interval
-\item  The width of the confidence interval is known as the \textbf{\emph{margin of error}}.  \[ \mbox{Margin of Error}  = \left[ \mbox{Quantile} \times \mbox{Standard Error} \right] \]
-\item  The margin of error gives us some idea about how uncertain we are about the unknown population parameter. \item  A very wide interval may indicate that more data should be collected before anything very definite can be said about the parameter.
-\item  The only way to control the margin of error is to adjust the sample size accordingly.
-\item  By choosing an appropriate sample size, it is possible to ensure that the margin of error does not excess a certain threshold.
-\end{itemize}
-
-
-
-
-
-
+- The product of the quantile and the standard error gives us the width of the confidence interval.
+- The width of the confidence interval is known as the **_margin of error_**:  
+  \[
+  \text{Margin of Error} = \text{Quantile} \times \text{Standard Error}
+  \]
+- The margin of error provides an indication of how uncertain we are about the unknown population parameter.
+- A very wide interval may suggest that more data should be collected before drawing any firm conclusions about the parameter.
+- The only way to control the margin of error is to adjust the sample size accordingly.
+- By choosing an appropriate sample size, it is possible to ensure that the margin of error does not exceed a specified threshold.
 
 \section{Margin of Error}
 
@@ -66,12 +61,42 @@ units of the population mean?
 
 
 
-\subsection{SSE for the Mean: Example}
+--------------------------------------------------------------------------------------------
 
-\begin{itemize}
-\item An IT training company has developed a new certification program. The company wishes to estimate the average score of those who complete the program by self-study.  \item The standard deviation of the self study group is assumed to be the same as the overall population of candidates, ie. 21.2 points.
-\item How many people must be tested if the sample mean is to be in error by no more than 3 points, with 95\% confidence.
-\end{itemize}
+## SSE for the Mean: Example
+
+- An IT training company has developed a new certification program. The company wishes to estimate the average score of those who complete the program by self-study.
+- The standard deviation of the self-study group is assumed to be the same as the overall population of candidates, i.e., 21.2 points.
+- How many people must be tested if the sample mean is to be in error by no more than 3 points, with 95% confidence?
+
+---
+
+- The sample size we require is the smallest value for \( n \) which satisfies this identity:
+  
+
+\[
+  n \geq \frac{\sigma^2 Q^2_{(1-\alpha)}}{E^2}
+  \]
+
+
+- Remark: \( 1-\alpha = 0.95 \), therefore \( Q_{(1-\alpha)} = 1.96 \). Also, \( E = 3 \) and \( \sigma = 21.2 \).
+  
+
+\[
+  n \geq \frac{(21.2)^2 \times (1.96)^2}{3^2}
+  \]
+
+
+- Solving, the required sample size is the smallest value of \( n \) that satisfies:
+  
+
+\[
+  n \geq 191.8410
+  \]
+
+
+- Therefore, the company needs to test **192** self-study candidates.
+
 
 
 
