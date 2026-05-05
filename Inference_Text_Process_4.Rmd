@@ -1,6 +1,3 @@
-Based on your content, here’s a clean and structured markdown tutorial that brings together the key ideas on independent samples, hypothesis testing, standard error, and statistical significance. It's presented in a way that's ready for review or instructional use.
-
----
 
 # Hypothesis Testing and Statistical Significance – A Practical Overview
 
@@ -102,5 +99,3 @@ Remember, **every experiment has variability**. Statistical significance helps r
 \]
 
 ---
-
-Let me know if you'd like to walk through a full example comparing two sample means or constructing a confidence interval using these principles.
